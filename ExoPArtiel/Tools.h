@@ -16,8 +16,8 @@ public:
 	static void AddVector(std::vector<int>& IVector, int index, int value);
 	static void FindInVector(std::vector<int> IVector, int value);
 
-	static void DisplayMap(std::map<int, int> iMap);
+	static void DisplayMap(const std::map<int, int>& iMap);
 	static void EraseMap(std::map<int, int>& iMap, int index);
 	static void AddMap(std::map<int, int>& iMap, int index, int value);
-	static void FindInMap(std::map<int, int>& iMap, int index);
+	static void FindInMap(std::map<int, int>iMap, int value);
 };

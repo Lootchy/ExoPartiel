@@ -65,3 +65,22 @@ void Tools::AddMap(std::map<int, int>& iMap, int index, int value) {
 void Tools::EraseMap(std::map<int, int>& iMap, int index) {
 	iMap.erase(index);
 }
+
+void Tools::FindInMap(std::map<int, int> iMap, int value) {
+	auto it = std::find_if(iMap.begin(), iMap.end(), [value](const std::pair<int, int>& element) 
+		{
+			return element.second == value;
+		});
+
+	if (it != iMap.end()) {
+		std::cout << value << " find in index : " << it->first << std::endl;;
+	}
+}
+
+void Tools::DisplayMap(const std::map<int, int>& iMap) {
+	std::cout << "Map : ";
+	for (const auto& it : iMap) {
+		std::cout << "[" << it.first << " : " << it.second << "] ";
+	}
+	std::cout << std::endl;
+}
